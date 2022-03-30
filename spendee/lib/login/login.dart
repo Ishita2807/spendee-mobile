@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       'login',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
@@ -104,13 +104,13 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 15, right: 35, left: 35, bottom: 5),
+              padding: const EdgeInsets.only(top: 15, right: 35, left: 35, bottom: 2),
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.04,
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Center(
                   child: GestureDetector(
-                    child: Text('Forgot Password?',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
+                    child: Text('Forgot Password?',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
                     onTap: ()=>{
                       Navigator.pushNamed(context,'/Third')
                     },
@@ -119,13 +119,13 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, right: 35, left: 35, bottom: 5),
+              padding: const EdgeInsets.only(top:2, right: 35, left: 35, bottom: 5),
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.04,
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Center(
                   child: GestureDetector(
-                    child: Text('Create an account?',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
+                    child: Text('Create an account?',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
                     onTap: ()=>{
                       Navigator.pushNamed(context,'/Second')
                     },

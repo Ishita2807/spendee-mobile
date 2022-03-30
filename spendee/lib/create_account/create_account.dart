@@ -125,7 +125,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     child: Text(
                       'Register Account',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
@@ -139,7 +139,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Center(
                   child: GestureDetector(
-                    child: Text('Forgot Password?',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
+                    child: Text('Forgot Password?',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
                     onTap: ()=>{
                       Navigator.pushNamed(context,'/Third')
                     },
@@ -150,14 +150,18 @@ class _CreateAccountState extends State<CreateAccount> {
             Padding(
               padding: const EdgeInsets.only(top: 5, right: 35, left: 35, bottom: 5),
               child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.04,
+                height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Center(
-                  child: GestureDetector(
-                    child: Text('Already have an account? Login!',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
-                    onTap: ()=>{
-                      Navigator.pushNamed(context,'/')
-                    },
+                  child: Column(
+                    children: [Text('Already have an account?',style:TextStyle(fontSize: 16) ),
+                       GestureDetector(
+                          child: Text('Login!',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
+                          onTap: ()=>{
+                            Navigator.pushNamed(context,'/')
+                          },
+                        ),
+                    ],
                   ),
                 ),
               ),
