@@ -33,15 +33,17 @@ class _ResetPasswordState extends State<ResetPassword> {
               ),
               Text(' Password?',style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               Padding(
-                padding: const EdgeInsets.only(top: 10, right: 40, left: 40),
-                child: Text('We get it, stuff happens. Just enter your '),
+                padding: const EdgeInsets.only(top: 15, right: 40, left: 40,bottom: 5),
+                child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.07,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: Text("We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!",
+                        textAlign: TextAlign.center)),
               ),
-              Text( "email address below and we'll send"),
-              Text(" you a link to reset your password!"),
 
               Padding(
                 padding:
-                const EdgeInsets.only(top:30, right: 35, left: 35, bottom: 5),
+                const EdgeInsets.only(top:20, right: 35, left: 35, bottom: 5),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 0.8,
@@ -72,7 +74,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       child: Text(
                         'Reset Password',
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
@@ -96,24 +98,22 @@ class _ResetPasswordState extends State<ResetPassword> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5, right: 35, left: 35, bottom: 5),
-                child: SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: Center(
-                    child: GestureDetector(
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: Center(
                       child: Column(
-                        children: [
-                          Text('Already have an account?',
-                              style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
-                          Text('Login!',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue))
+                        children: [Text('Already have an account?',style:TextStyle(fontSize: 16) ),
+                          GestureDetector(
+                            child: Text('Login!',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
+                            onTap: ()=>{
+                              Navigator.pushNamed(context,'/')
+                            },
+                          ),
                         ],
                       ),
-                      onTap: ()=>{
-                        Navigator.pushNamed(context,'/')
-                      },
                     ),
                   ),
-                ),
               )
             ],
           ),
