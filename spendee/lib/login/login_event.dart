@@ -17,6 +17,6 @@ class LoginPassword extends LoginEvent{
 }
 
 class Login extends LoginEvent{
-  BuildContext context;
-  Login({required this.context});
+   BuildContext context;
+   Login({required this.context});
 }

@@ -88,9 +88,10 @@ class _ResetPasswordState extends State<ResetPassword> {
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: Center(
                     child: GestureDetector(
-                      child: Text('Create an account!',style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
+                      child: Text('Create an account!',
+                          style: TextStyle(fontSize: 18,decoration:TextDecoration.underline,color: Colors.blue)),
                       onTap: ()=>{
-                        Navigator.pushNamed(context,'/Second')
+                        Navigator.pushNamed(context,'/Third')
                       },
                     ),
                   ),
@@ -107,7 +108,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                           GestureDetector(
                             child: Text('Login!',style: TextStyle(fontSize: 16,decoration:TextDecoration.underline,color: Colors.blue)),
                             onTap: ()=>{
-                              Navigator.pushNamed(context,'/')
+                              Navigator.pushNamed(context,'/Second')
                             },
                           ),
                         ],

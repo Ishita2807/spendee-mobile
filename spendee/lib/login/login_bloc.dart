@@ -29,12 +29,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState>{
       print("Login Event Called");
       print(state.email);
       print(state.password);
-      var response = await authRepo.Login(state.email,state.password);
+      var response = await authRepo.login(state.email,state.password);
 
       if(response.statusCode == 200)
       {
         var jsonData = jsonDecode(response.body);
-        Navigator.of(event.context).pushNamed('/Third');
+        Navigator.of(event.context).pushNamed('/');
 
       }
       else{
