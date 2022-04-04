@@ -19,7 +19,7 @@ class CreateAccountModel {
   factory CreateAccountModel.fromJson(Map<String, dynamic> json) => CreateAccountModel(
       first_name: json["first_name"],
       last_name: json["last_name"],
-      email: json["course"],
+      email: json["email"],
       password: json["password"],
   );
 
