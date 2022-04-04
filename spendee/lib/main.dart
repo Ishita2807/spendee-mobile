@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spendee/category/category_bloc.dart';
 import 'package:spendee/create_account/create_account_bloc.dart';
 import 'package:spendee/reset_password/reset_password.dart';
+import 'package:spendee/transaction/transaction_screen.dart';
 
 import 'category/category_screen.dart';
 import 'create_account/create_account.dart';
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
         '/Second': (context)=> LoginScreen(),
         '/Third':(context)=> CreateAccount(),
         '/Fourth': (context)=> ResetPassword(),
-        '/Fifth' : (context) => CategoryScreen()
+        '/Fifth' : (context) => CategoryScreen(),
+        '/Sixth' : (context) => TransactionScreen()
 
       }
     );

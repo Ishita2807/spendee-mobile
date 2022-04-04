@@ -59,7 +59,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+       floatingActionButton: FloatingActionButton(onPressed: (){
+          _showFormDialog(context);
+        },
+          child: Icon(Icons.add),),
+
+        appBar: AppBar(
         title: Text('Category'),
       ),
       body: SingleChildScrollView(
@@ -90,23 +95,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
                           ),
                         ],
                       ),
-
                    ]
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top:200,right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  FloatingActionButton(onPressed: (){
-                    _showFormDialog(context);
-                  },
-                    child: Icon(Icons.add),)
-                ],
-              ),
-            )
-
           ],
         ),
       ),
