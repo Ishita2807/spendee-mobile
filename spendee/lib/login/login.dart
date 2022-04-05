@@ -48,8 +48,11 @@ class _LoginState extends State<LoginScreen> {
                       border:
                           OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                     ),
+                    onChanged: (value) =>
+                        context.read<LoginBloc>().add(
+                          LoginEmail(email: value)),
                   ),
-                ),
+              ),
               ),
               Padding(
                 padding:
@@ -65,6 +68,9 @@ class _LoginState extends State<LoginScreen> {
                       border:
                           OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                     ),
+                    onChanged: (value) =>
+                        context.read<LoginBloc>().add(
+                            LoginPassword(password: value)),
                   ),
                 ),
               ),

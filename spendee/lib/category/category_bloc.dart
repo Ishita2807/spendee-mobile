@@ -24,9 +24,8 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState>{
       print("Save category event Called");
       print(state.category_name);
       print(state.parent_category_id);
-      print(state.user_id);
 
-      var response = await authRepo.createCategory(state.category_name,state.parent_category_id,state.user_id);
+      var response = await authRepo.createCategory(state.category_name,state.parent_category_id);
 
       if(response.statusCode == 200)
       {

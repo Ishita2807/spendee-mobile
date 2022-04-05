@@ -49,6 +49,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   hintText: 'Category',
                   labelText: 'Add Category'
                 ),
+                onChanged: (value) =>context.read<CategoryScreen>() ,
               ),
             ],
           ),

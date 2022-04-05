@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spendee/accounts/account_bloc.dart';
+import 'package:spendee/accounts/account_screen.dart';
 import 'package:spendee/category/category_bloc.dart';
 import 'package:spendee/create_account/create_account_bloc.dart';
 import 'package:spendee/reset_password/reset_password.dart';
@@ -18,7 +20,9 @@ void main(){
           [
             BlocProvider<CreateAccountBloc>(create: (BuildContext context)=> CreateAccountBloc(),),
             BlocProvider<LoginBloc>(create: (BuildContext context)=> LoginBloc(),),
-            BlocProvider<CategoryBloc>(create: (BuildContext context)=> CategoryBloc(),)
+            BlocProvider<CategoryBloc>(create: (BuildContext context)=> CategoryBloc(),),
+            BlocProvider<AccountBloc>(create: (BuildContext context)=> AccountBloc(),)
+
           ],
 
       child:MyApp()
@@ -39,8 +43,8 @@ class MyApp extends StatelessWidget {
         '/Third':(context)=> CreateAccount(),
         '/Fourth': (context)=> ResetPassword(),
         '/Fifth' : (context) => CategoryScreen(),
-        '/Sixth' : (context) => TransactionScreen()
-
+        '/Sixth' : (context) => TransactionScreen(),
+        '/Seventh' : (context) => AccountScreen()
       }
     );
   }

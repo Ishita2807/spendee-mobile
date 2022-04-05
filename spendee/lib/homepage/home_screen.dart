@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // Update the state of the app
                     // ...
                     // Then close the drawer
-                    Navigator.pop(context);
+                    Navigator.pushNamed(context,'/Seventh');
                   },
                 ),ListTile(
                   title: Row(
