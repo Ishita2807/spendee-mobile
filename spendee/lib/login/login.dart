@@ -46,7 +46,7 @@ class _LoginState extends State<LoginScreen> {
                       hintText: 'abc@gmail.com',
                       hintStyle: TextStyle(fontSize: 15),
                       border:
-            git               OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                     ),
                   ),
                 ),
