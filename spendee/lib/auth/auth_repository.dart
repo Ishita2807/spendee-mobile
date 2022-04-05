@@ -18,14 +18,14 @@ class AuthRepository {
     body1["email"] = email_address;
     body1["password"] = create_password;
 
-    Map<String, dynamic> body2 = Map();
-    body2["user"]= body1;
+    // Map<String, dynamic> body2 = Map();
+    // body2["user"]= body1;
 
     print(body1);
     var response = await http.post(
         Uri.parse("http://rails.docswiz.com:9000/users.json"),
         headers: header,
-        body: json.encode(body2));
+        body: json.encode(body1));
     print(response.statusCode);
     print(response.body);
     var jsondata = json.decode(response.body);
